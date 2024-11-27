@@ -11,6 +11,8 @@
         <button type="submit">Upload</button>
     </form>
 
+    <button onclick="callFunction()">Run Function</button>
+
     <script>
         document.getElementById("uploadForm").onsubmit = async (e) => {
             e.preventDefault();
@@ -35,5 +37,21 @@
             }
         };
     </script>
+
+    <script>
+        async function callFunction() {
+            let data = { input: "example" };
+            console.log('-1-');
+            let response = await fetch("https://89.169.165.129:5000/run-function", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+            console.log('-2-');
+            let result = await response.json();
+            console.log(result);
+        }
+    </script>
+  
 </body>
 </html>
