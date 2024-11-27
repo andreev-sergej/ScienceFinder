@@ -11,6 +11,7 @@ line_length = 120
 line-length = 120
 
 [tool.mypy]
+files = ["."]
 install_types = "True"
 non_interactive = "True"
 disallow_untyped_defs = "True"
