@@ -8,7 +8,7 @@ from keyword_model.pdf_orm_parser.pdf_parser import PDFParser
 
 class Model:
     @staticmethod
-    def _validate_path(path):
+    def _validate_path(path: str) -> None:
         if not os.path.exists(path):
             raise ValueError(f"File {path} not exists")
         filename, file_extension = os.path.splitext(path)
