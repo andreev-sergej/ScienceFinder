@@ -1,0 +1,171 @@
+.uploadPage {
+  border-radius: 44px;
+  background-color: rgba(241, 241, 246, 1);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  padding-bottom: 10px;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+}
+
+.statusBar {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 20px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.14px;
+  line-height: 1;
+  justify-content: space-between;
+  padding: 22px 28px 10px;
+}
+
+.statusIcon {
+  aspect-ratio: 2.7;
+  object-fit: contain;
+  object-position: center;
+  width: 46px;
+}
+
+.headerContents {
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 28px;
+  padding: 14px 16px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+}
+
+.title {
+  flex: 1;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 33px 0;
+}
+
+.historyTitle {
+  color: rgba(167, 167, 167, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.1px;
+  margin: 0 0 11px;
+}
+
+.uploadTitle {
+  color: rgba(53, 53, 53, 1);
+  font-family: "Wix Madefor Display", -apple-system, Roboto, Helvetica,
+    sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 76px 0 0;
+}
+
+.uploadDescription {
+  color: rgba(53, 53, 53, 1);
+  font-family: "Wix Madefor Display", -apple-system, Roboto, Helvetica,
+    sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 21px 0 61px;
+}
+
+.uploadSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.fileSelector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.uploadIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 48px;
+}
+
+.fileType {
+  color: rgba(167, 167, 167, 1);
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.uploadButton {
+  border-radius: 8px;
+  background-color: rgba(240, 228, 216, 1);
+  border: none;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 69px;
+  cursor: pointer;
+  color: #3c6e71;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 21px;
+}
+
+.buttonIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 17px;
+}
+
+.analyzeButton {
+  border-radius: 8px;
+  background-color: rgba(60, 110, 113, 1);
+  border: none;
+  color: #f0e4d8;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2;
+  padding: 12px 70px;
+  cursor: pointer;
+  margin-bottom: 21px;
+}
+
+.handle {
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 1);
+  width: 108px;
+  height: 4px;
+  align-self: center;
+}

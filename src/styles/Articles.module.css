@@ -1,0 +1,150 @@
+.articlesContainer {
+  border-radius: 44px;
+  background-color: rgba(241, 241, 246, 1);
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  letter-spacing: 0.1px;
+  margin: 0 auto;
+  font: 16px Roboto, sans-serif;
+}
+
+.statusBar {
+  background-color: #fff;
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  letter-spacing: 0.14px;
+}
+
+.statusIcon {
+  aspect-ratio: 2.7;
+  object-fit: contain;
+  width: 46px;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  align-self: stretch;
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 28px;
+}
+
+.headerTitle {
+  flex: 1;
+  font-size: 19px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.15px;
+}
+
+.menuIcon,
+.settingsIcon {
+  width: 20px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.mainTitle {
+  color: #353535;
+  margin-top: 33px;
+  font: 800 34px/1 "Wix Madefor Display", -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+
+.searchContainer {
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  margin-top: 33px;
+  width: 366px;
+  max-width: 100%;
+  gap: 10px;
+  padding: 21px;
+  align-items: center;
+}
+
+.searchIcon {
+  width: 15px;
+  aspect-ratio: 1.07;
+  object-fit: contain;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  color: #999fa2;
+  font-size: 18px;
+  width: 100%;
+}
+
+.articlesList {
+  width: 100%;
+  max-width: 366px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 33px;
+}
+
+.articleCard {
+  border-radius: 14px;
+  background-color: rgba(248, 248, 251, 0.8);
+  display: flex;
+  padding: 8px 7px 8px 15px;
+  gap: 10px;
+}
+
+.articleContent {
+  flex: 1;
+}
+
+.articleTitle {
+  color: #353535;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.articleDescription {
+  color: #4c4c4d;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+.articleIcon {
+  width: 26px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  align-self: flex-end;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .statusBar,
+  .header {
+    display: none;
+  }
+}

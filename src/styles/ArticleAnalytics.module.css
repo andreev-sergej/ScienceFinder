@@ -1,0 +1,166 @@
+.container {
+    border-radius: 44px;
+    background-color: rgba(241, 241, 246, 1);
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    padding-bottom: 10px;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #fff;
+  }
+  
+  .statusBar {
+    display: flex;
+    width: 100%;
+    align-items: start;
+    gap: 20px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: 0.14px;
+    line-height: 1;
+    justify-content: space-between;
+    padding: 22px 28px 10px;
+  }
+  
+  .statusIcon {
+    aspect-ratio: 2.7;
+    object-fit: contain;
+    object-position: center;
+    width: 46px;
+  }
+  
+  .titleBar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    min-height: 56px;
+    align-items: center;
+    gap: 28px;
+    overflow: hidden;
+    padding: 14px 16px;
+  }
+  
+  .menuIcon, .searchIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+  }
+  
+  .title {
+    flex: 1;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+    line-height: 1;
+    margin: 0;
+  }
+  
+  .content {
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    letter-spacing: 0.1px;
+    padding: 0 2px 0 26px;
+  }
+  
+  .documentHeader {
+    display: flex;
+    width: 170px;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 15px;
+    color: rgba(167, 167, 167, 1);
+    font-weight: 400;
+    line-height: 26px;
+  }
+  
+  .documentIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 48px;
+  }
+  
+  .articleTitle {
+    color: rgba(53, 53, 53, 1);
+    margin: 18px 0;
+    font: 800 30px/32px "Wix Madefor Display", -apple-system, Roboto, Helvetica, sans-serif;
+    max-width: 90%;
+  overflow: hidden;
+  text-align: center;
+  }
+  
+  .articleDescription {
+    color: rgba(53, 53, 53, 1);
+    margin: 18px 0;
+    font: 400 18px/24px "Wix Madefor Display", -apple-system, Roboto, Helvetica, sans-serif;
+    max-width: 90%;
+  overflow: hidden;
+  text-align: justify;
+  }
+  
+  .tagGroups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+  }
+  
+  .actions {
+    display: flex;
+    margin-top: 24px;
+    gap: 30px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  .backButton {
+    border-radius: 8px;
+    background-color: rgba(240, 228, 216, 1);
+    color: #3c6e71;
+    padding: 18px 60px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .searchButton {
+    border-radius: 8px;
+    background-color: rgba(60, 110, 113, 1);
+    color: #f0e4d8;
+    padding: 12px 60px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .handle {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 1);
+    align-self: center;
+    width: 108px;
+    height: 4px;
+    margin-top: 19px;
+  }
+  
+  @media (max-width: 640px) {
+    .statusBar,
+    .titleBar {
+      display: none;
+    }
+  }
