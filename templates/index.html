@@ -6,34 +6,14 @@
 </head>
 <body>
     <h1>Upload PDF File</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" id="pdfFile" accept="application/pdf" required />
-        <button type="submit">Upload</button>
-    </form>
-
-    <script>
-        document.getElementById("uploadForm").onsubmit = async (e) => {
-            e.preventDefault();
-            
-            let fileInput = document.getElementById("pdfFile");
-            let file = fileInput.files[0];
-            if (!file) return alert("Please select a file!");
-
-            let formData = new FormData();
-            formData.append("pdf", file);
-
-            try {
-                const response = await fetch("/upload", {
-                    method: "POST",
-                    body: formData
-                });
-                const result = await response.json();
-                alert(result.message);
-            } catch (error) {
-                console.error("Error:", error);
-                alert("Failed to upload file.");
-            }
-        };
-    </script>
+    <div class="upload-section">
+            <input type="file" id="fileInput" accept="application/pdf">
+            <button id="submitButton">Submit File</button>
+    </div>
+    <div class="action-buttons">
+            <button id="extractButton">Extract Keywords</button>
+    </div>
+    <div id="message" class="message"></div>
+    <script src="/static/scripts.js"></script>
 </body>
 </html>

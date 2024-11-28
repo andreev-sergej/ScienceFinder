@@ -1,7 +1,10 @@
 import os
+from crypt import methods
 from typing import Any
 
 from flask import Flask, jsonify, render_template, request
+
+from keyword_model.model.model import Model
 
 app = Flask(__name__, template_folder="templates")
 UPLOAD_FOLDER = "uploads"
@@ -19,6 +22,8 @@ def upload_pdf() -> Any:
         return jsonify({"message": "No file part"}), 400
 
     pdf_file = request.files["pdf"]
+    if pdf_file.filename is None:
+        return jsonify({"message": "No file part"}), 400
     if pdf_file.filename == "":
         return jsonify({"message": "No selected file"}), 400
 
@@ -28,6 +33,19 @@ def upload_pdf() -> Any:
         return jsonify({"message": f"File uploaded successfully as {pdf_file.filename}"})
     else:
         return jsonify({"message": "Invalid file type, only PDFs allowed"}), 400
+
+
+@app.route("/extract", methods=["POST"])
+def extract_keywords() -> Any:
+    pdf_file = request.files["pdf"]
+    if pdf_file.filename is None:
+        return jsonify({"message": "No file part"}), 400
+    filepath = os.path.join(UPLOAD_FOLDER, pdf_file.filename)
+    if not os.path.exists(filepath):
+        return jsonify({"message": "File not exist, submit it first"}), 400
+    model = Model()
+    keywords = model.get_key_words(filepath)
+    return jsonify({"message": keywords})
 
 
 if __name__ == "__main__":
